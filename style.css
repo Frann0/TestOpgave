@@ -332,7 +332,7 @@ body {
 .Action_InputWrapper {
     display: flex;
     flex-direction: row;
-    gap: 5px;
+    gap: 10px;
     width: 100%;
 }
 
@@ -361,7 +361,15 @@ body {
     font-size: 1rem;
     font-weight: 300;
     flex: 0.5;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
+
+.Action_Button:hover {
+    background-color: white;
+    color: black;
+}
+
 
 .Nigh_Container {
     width: calc(100% - var(--padding));
