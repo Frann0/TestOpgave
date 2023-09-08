@@ -2,15 +2,19 @@ body {
     margin: 0;
 }
 
+:root {
+    --padding: 300px;
+}
+
 .Nav_Container {
-    padding: 50px;
+    padding: 50px var(--padding);
     height: 40px;
     width: 100%;
     position: fixed;
     z-index: 2;
 }
 .Nav_Wrapper {
-    width: calc(100% - 140px);
+    width: calc(100% - (var(--padding) * 2));
     height: 100%;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.1);
@@ -93,9 +97,9 @@ body {
 }
 .CTA_Wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
     grid-template-rows: repeat(4, minmax(275px, auto));
-    padding: 0 0 0 50px;
+    padding: 0 0 0 var(--padding);
 }
 
 .CTA_Item {
@@ -149,7 +153,7 @@ body {
 
 .Header2 {
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: 300;
     color: white;
     text-decoration: none;
     font-family: "Roboto", sans-serif;
@@ -218,7 +222,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 50px var(--padding);
 }
 
 .Information_HeaderContainer {
@@ -258,7 +262,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(150px, 275px));
     grid-template-rows: repeat(2, minmax(150px, 275px));
-    padding: 0 0 0 50px;
+    padding: 0 0 0 var(--padding);
 }
 .Words_Item {
     grid-column: 1;
@@ -280,11 +284,11 @@ body {
 }
 
 .Words_InformationContainer {
-    width: calc(100% - 50px);
+    width: calc(100% - var(--padding));
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
+    padding-left: var(--padding);
 }
 
 .Words_InformationWrapper {
@@ -302,24 +306,23 @@ body {
 }
 
 .Words_Information:nth-child(1) {
-    padding: 50px 0 50px 50px;
+    padding: 50px 0 50px var(--padding);
 }
 
 .Words_Information:nth-child(2) {
-    padding: 50px 50px 50px 0;
+    padding: 50px var(--padding) 50px 0;
 }
 
 .Action_Container {
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
-    width: calc(100% - 50px);
+    padding-left: var(--padding);
+    width: calc(100% - var(--padding));
     height: 100%;
 }
 
 .Action_Wrapper {
-    padding: 50px;
-    padding-right: 100px;
+    padding: 50px var(--padding);
     display: flex;
     flex-direction: column;
     background-color: #333;
@@ -361,9 +364,9 @@ body {
 }
 
 .Nigh_Container {
-    width: calc(100% - 50px);
+    width: calc(100% - var(--padding));
     position: relative;
-    margin-left: 50px;
+    margin-left: var(--padding);
 }
 .Nigh_Container::before {
     content: "";
@@ -383,17 +386,16 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, minmax(275px, auto));
-    padding: 0 0 0 50px;
 }
 
 .Nigh_NiceContainer {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 3/5;
     background-color: rgb(255, 85, 0);
     padding: 30px;
 }
 .Nigh_NiceImage {
-    grid-column: 3/5;
+    grid-column: 2/4;
     grid-row: 3;
     background-image: url(/assets/naturbaggrund2.jpg);
     background-size: cover;
@@ -411,13 +413,13 @@ body {
     mix-blend-mode: color;
 }
 .Nigh_InfoContainer {
-    grid-column: 3/5;
+    grid-column: 2/4;
     grid-row: 4;
     padding: 30px 30px 0 30px;
 }
 .Footer_Container {
     width: 100%;
-    padding: 50px;
+    padding: var(--padding);
     background-color: #333;
     display: flex;
     flex-direction: column;
@@ -427,7 +429,7 @@ body {
 .Footer_Wrapper {
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 100px;
 }
 
 .Footer_LinkCluster {
