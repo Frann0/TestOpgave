@@ -16,4 +16,6 @@
     - [x] Optimised use of WebP pics instead of PNGs / JPGs <br>
     - [x] Animations for both desktop and mobile <br>
     - [x] Responsive design <br>
+    - [x] 95% avg Mobile Lighthouse score <br>
+    - [x] 96% avg Desktop Lighthouse score <br>
 </p>
