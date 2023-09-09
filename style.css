@@ -33,6 +33,7 @@ body {
         padding: 0 20px;
         gap: 20px;
         align-items: center;
+        margin: 0;
     }
     .NavItem_Wrapper {
         list-style: none;
@@ -616,6 +617,7 @@ body {
         padding: 0 var(--navGap);
         gap: var(--navGap);
         align-items: center;
+        margin: 0;
     }
     .NavItem_Wrapper {
         list-style: none;
