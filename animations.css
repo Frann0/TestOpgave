@@ -28,6 +28,17 @@
     animation: slideInLeft 0.5s ease-in-out forwards;
 }
 
+@keyframes slideInRightMobile {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
 @keyframes slideInRight {
     0% {
         opacity: 0;
@@ -38,6 +49,12 @@
         opacity: 1;
         filter: blur(0px);
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slideInRight {
+        animation: slideInRightMobile 0.5s ease-in-out forwards !important;
     }
 }
 

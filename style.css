@@ -266,7 +266,7 @@ body {
         font-weight: 300;
         color: white;
         text-decoration: none;
-
+        text-transform: uppercase;
         margin: 0;
     }
 
@@ -837,7 +837,7 @@ body {
         font-weight: 300;
         color: white;
         text-decoration: none;
-
+        text-transform: uppercase;
         margin: 0;
     }
 
@@ -846,10 +846,8 @@ body {
         font-weight: 200;
         color: black;
         text-decoration: none;
-
         margin: 0;
         text-transform: uppercase;
-        text-align: justify;
     }
 
     .Header4 {

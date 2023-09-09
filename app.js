@@ -27,6 +27,7 @@ slideInRight.forEach((slideInRight) => {
   slideInRightObserver.observe(slideInRight);
 });
 
+
 const slideInLeftObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
