@@ -382,7 +382,7 @@ body {
         aspect-ratio: 1/1;
         grid-column: 2;
         grid-row: 2;
-        background-image: url(/assets/person1.jpg);
+        background-image: url(/assets/person1.webp);
         background-size: cover;
         position: relative;
         background-position: bottom;
@@ -953,7 +953,7 @@ body {
         aspect-ratio: 1/1;
         grid-column: 2;
         grid-row: 2;
-        background-image: url(/assets/person1.jpg);
+        background-image: url(/assets/person1.webp);
         background-size: cover;
         position: relative;
         background-position: bottom;
