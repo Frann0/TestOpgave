@@ -11,11 +11,21 @@
 <img src="https://img.shields.io/badge/-JavaScript-b39d0c?style=flat-square&logo=javascript"/>
 </p>
 
-<h2 align="center">Completed</h2>
-<p align="center">
-    - [x] Optimised use of WebP pics instead of PNGs / JPGs <br>
-    - [x] Animations for both desktop and mobile <br>
-    - [x] Responsive design <br>
-    - [x] 95% avg Mobile Lighthouse score <br>
-    - [x] 96% avg Desktop Lighthouse score <br>
-</p>
+<h2 align="center">Accomplished</h2>
+<ul>
+    <li>
+        Optimised use of WebP pics instead of PNGs / JPGs
+    </li>
+    <li>
+        Animations for both desktop and mobile
+    </li>
+    <li>
+        Responsive design
+    </li>
+    <li>
+        95% avg Mobile Lighthouse score
+    </li>
+    <li>
+        96% avg Desktop Lighthouse score
+    </li>
+</ul> 
