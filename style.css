@@ -633,6 +633,15 @@ body {
         opacity: 0.5;
     }
 
+    .NavItem::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: transparent;
+        z-index: 2;
+    }
+
     .NavItem_Selected {
         font-size: 0.9rem;
         font-weight: 600;
