@@ -1,12 +1,17 @@
 body {
     margin: 0;
     font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --orange: rgb(244, 101, 35);
+    --gray: rgba(255, 255, 255, 0.3);
 }
 
 @media screen and (min-width: 768px) {
     :root {
         --padding: 200px;
-        --orange: rgb(244, 101, 35);
         --standardPadding: 50px;
     }
 
@@ -42,6 +47,17 @@ body {
         color: white;
         text-decoration: none;
         opacity: 0.5;
+        text-shadow: 0 0 5px black;
+        position: relative;
+    }
+
+    .NavItem::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: transparent;
+        z-index: 2;
     }
 
     .NavItem_Selected {
@@ -49,18 +65,18 @@ body {
         font-weight: 600;
         color: white;
         text-decoration: none;
-
-        opacity: 13;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
     }
 
     .NavItem_Selected::after {
         content: "";
         display: block;
-        width: 100%;
+        width: 0;
         height: 2px;
         background: var(--orange);
-        transition: width 0.3s;
         z-index: 2;
+        animation: widthAnimation 0.3s ease-in-out forwards;
     }
 
     .CTA_Container {
@@ -75,7 +91,8 @@ body {
         left: 0;
         width: 100%;
         height: calc(275px * 3 + 60px);
-        background-image: url(/assets/baggrund1.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
+            url(/assets/baggrund1.webp);
         background-size: cover;
         background-repeat: no-repeat;
         filter: grayscale(100%);
@@ -110,9 +127,99 @@ body {
         grid-row: 2;
     }
 
+    .CTA_ArrowWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: start;
+        padding-left: calc(var(--standardPadding) * 2);
+        position: relative;
+    }
+
+    .CTA_ArrowWrapper::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 2.2rem;
+        width: 1ch;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .ArrowRight {
+        height: 24px;
+        filter: invert(100%);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .ArrowRight:hover {
+        transform: translateX(5px);
+    }
+
+    .test2 {
+        position: relative;
+    }
+
+    .test1 {
+        position: relative;
+    }
+
+    .test2::before {
+        content: "";
+        width: 1ch;
+        height: 2px;
+        background-color: var(--gray);
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
+
+    .test1::after {
+        content: "";
+        width: 1ch;
+        height: 2px;
+        background-color: var(--gray);
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        font-size: 2.2rem;
+    }
+
     .CTA_Test1 {
         grid-column: 1;
         grid-row: 3;
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: start;
+        justify-content: start;
+    }
+
+    .CircleArrowDown {
+        height: 48px;
+        width: 48px;
+        filter: invert(100%);
+    }
+
+    .CircleArrowRight {
+        height: 48px;
+        width: 48px;
+        filter: invert(52%) sepia(22%) saturate(2807%) hue-rotate(340deg) brightness(92%) contrast(108%);
+    }
+
+    .Pointer {
+        cursor: pointer;
+    }
+
+    .growOnHover {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .growOnHover:hover {
+        transform: scale(1.1);
     }
 
     .CTA_BAO {
@@ -124,7 +231,7 @@ body {
     .CTA_BAOImage {
         grid-column: 3/5;
         grid-row: 3;
-        background-image: url(/assets/naturbaggrund2.jpg);
+        background-image: url(/assets/nature1.webp);
         background-size: cover;
         position: relative;
         background-position: bottom;
@@ -249,7 +356,8 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(/assets/baggrund2.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
+            url(/assets/baggrund2.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -360,7 +468,7 @@ body {
 
         font-size: 1rem;
         font-weight: 300;
-        flex: .5;
+        flex: 0.5;
         min-width: 100px;
         transition: all 0.3s ease-in-out;
         cursor: pointer;
@@ -384,7 +492,8 @@ body {
         left: 0;
         width: 100%;
         height: calc(250px * 3);
-        background-image: url(/assets/baggrund2.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
+            url(/assets/baggrund3.webp);
         background-size: cover;
         background-repeat: no-repeat;
         filter: grayscale(100%);
@@ -406,7 +515,7 @@ body {
     .Nigh_NiceImage {
         grid-column: 2/4;
         grid-row: 3;
-        background-image: url(/assets/naturbaggrund2.jpg);
+        background-image: url(/assets/nature2.webp);
         background-size: cover;
         position: relative;
         background-position: bottom;
@@ -445,6 +554,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        opacity: 0;
     }
 
     .Footer_Title {
@@ -488,19 +598,15 @@ body {
         --padding: 30px;
         --navGap: 20px;
         --BAOPadding: 10px;
-
-        --orange: rgb(244, 101, 35);
     }
 
     .Nav_Container {
         padding: 50px var(--padding);
         height: 40px;
-        width: calc(100% - (var(--padding) * 2));
         position: fixed;
         z-index: 2;
     }
     .Nav_Wrapper {
-        width: calc(100% - (var(--padding) * 2));
         height: 100%;
         border-radius: 5px;
         background-color: rgba(255, 255, 255, 0.1);
@@ -544,6 +650,7 @@ body {
         background: var(--orange);
         transition: width 0.3s;
         z-index: 2;
+        animation: width 0.3s ease-in-out forwards;
     }
 
     .CTA_Container {
@@ -558,7 +665,8 @@ body {
         left: 0;
         width: 100%;
         height: calc(150px * 3 + 60px);
-        background-image: url(/assets/baggrund1.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
+            url(/assets/baggrund1.webp);
         background-size: cover;
         background-repeat: no-repeat;
         filter: grayscale(100%);
@@ -594,8 +702,86 @@ body {
     }
 
     .CTA_Test1 {
-        grid-column: 1;
-        grid-row: 3;
+        grid-column: 3;
+        grid-row: 2;
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .CircleArrowDown {
+        height: 32px;
+        width: 32px;
+        filter: invert(100%);
+    }
+
+    .CircleArrowRight {
+        height: 32px;
+        width: 32px;
+        filter: invert(52%) sepia(22%) saturate(2807%) hue-rotate(340deg) brightness(92%) contrast(108%);
+    }
+
+    .CTA_ArrowWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        justify-content: start;
+        padding-left: calc(var(--padding) * 2);
+        margin-bottom: var(--padding);
+    }
+
+    .CTA_ArrowWrapper::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 2.2rem;
+        width: 1ch;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .ArrowRight {
+        height: 24px;
+        filter: invert(100%);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .ArrowRight:hover {
+        transform: translateX(5px);
+    }
+
+    .test2 {
+        position: relative;
+    }
+
+    .test1 {
+        position: relative;
+    }
+
+    .test2::before {
+        content: "";
+        width: 1ch;
+        height: 2px;
+        background-color: var(--gray);
+        position: absolute;
+        top: -20px;
+        left: 0;
+    }
+
+    .test1::after {
+        content: "";
+        width: 1ch;
+        height: 2px;
+        background-color: var(--gray);
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        font-size: 2.2rem;
     }
 
     .CTA_BAO {
@@ -607,7 +793,7 @@ body {
     .CTA_BAOImage {
         grid-column: 2/4;
         grid-row: 3;
-        background-image: url(/assets/naturbaggrund2.jpg);
+        background-image: url(/assets/nature1.webp);
         background-size: cover;
         position: relative;
         background-position: bottom;
@@ -732,7 +918,8 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(/assets/baggrund2.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
+            url(/assets/baggrund2.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -867,7 +1054,8 @@ body {
         left: 0;
         width: 100%;
         height: calc(125px * 3);
-        background-image: url(/assets/baggrund2.jpg);
+        background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
+            url(/assets/baggrund3.webp);
         background-size: cover;
         background-repeat: no-repeat;
         filter: grayscale(100%);
@@ -889,7 +1077,7 @@ body {
     .Nigh_NiceImage {
         grid-column: 2/4;
         grid-row: 3;
-        background-image: url(/assets/naturbaggrund2.jpg);
+        background-image: url(/assets/nature2.webp);
         background-size: cover;
         position: relative;
         background-position: bottom;
@@ -928,6 +1116,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        opacity: 0;
     }
 
     .Footer_Title {

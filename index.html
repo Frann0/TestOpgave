@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test opgave - Charlie</title>
     <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="animations.css">
     <script defer src="app.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,6 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14022bfd3e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -37,24 +39,32 @@
         </div>
     </div>
     <div class="CTA_Container">
-        <p class="Logo">
+        <p class="Logo logoAnimation">
             TRA<span class="Logo_Orange">И</span>S
         </p>
         <div class="CTA_Wrapper">
-            <div class="CTA_Item">
-                <h1 class="Header1">
+            <div class="CTA_Item SlideLeft">
+                <h1 class="Header1 test2">
                     SLEEK AS
                 </h1>
                 <h1 class="Header1">
                     FKUC
                 </h1>
-                <p class="Paragraph1">
+                <p class="Paragraph1 ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
+                <div class="CTA_ArrowWrapper test1">
+                    <img class="ArrowRight" src="/assets/icons/ArrowRight.svg" alt="Arrow Right">
+                </div>
+
             </div>
             <div class="CTA_Test1">
+                <img id="CircleScrollDown" class="CircleArrowDown growOnHover Pointer" src="/assets/icons/ArrowDown.svg"
+                    alt="Arrow Down">
+                <img class="CircleArrowRight growOnHover Pointer" src="/assets/icons/CircleArrowRight.svg"
+                    alt="Arrow Right">
             </div>
-            <div class="CTA_BAO">
+            <div class="CTA_BAO SlideRight">
                 <h1 class="Header2">
                     BRIGHT ASS ORANGE
                 </h1>
@@ -66,9 +76,9 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quae itaque unde quos quia illo
                 </p>
             </div>
-            <div class="CTA_BAOImage">
+            <div class="CTA_BAOImage SlideRight">
             </div>
-            <div class="CTA_InfoContainer">
+            <div class="CTA_InfoContainer SlideRight">
                 <h1 class="Header3">
                     finaly a layout that blows your head off
                 </h1>
@@ -81,13 +91,13 @@
             </div>
         </div>
     </div>
-    <div class="Information_Container">
-        <div class="Information_HeaderContainer">
+    <div class="Information_Container" id="Information">
+        <div class="Information_HeaderContainer SlideLeft">
             <h1 class="Header3">
                 MELBOURNE, AUSTRALIA
             </h1>
         </div>
-        <div class="Information_Wrapper">
+        <div class="Information_Wrapper SlideLeft">
             <div class="Information_Left">
                 <p class="Paragraph3">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum deserunt possimus quae at mollitia
@@ -128,7 +138,7 @@
         </div>
     </div>
     <div class="Words_Container">
-        <div class="Words_Wrapper">
+        <div class="Words_Wrapper SlideRight">
             <div class="Words_Item">
                 <h1 class="Header4">
                     Words & Such
@@ -138,9 +148,9 @@
             </div>
         </div>
     </div>
-    <div class="Words_InformationContainer">
+    <div class="Words_InformationContainer ">
         <div class="Words_InformationWrapper">
-            <div class="Words_Information">
+            <div class="Words_Information SlideRight">
                 <p class="Paragraph1">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis velit, cum iusto quod
                     laboriosam, odio quaerat dicta quo voluptatum illo recusandae, beatae placeat blanditiis nisi at
@@ -153,7 +163,7 @@
                     consequatur non laboriosam. Deleniti.
                 </p>
             </div>
-            <div class="Words_Information">
+            <div class="Words_Information SlideRight">
                 <p class="Paragraph1">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis velit, cum iusto quod
                     laboriosam, odio quaerat dicta quo voluptatum illo recusandae, beatae placeat blanditiis nisi at
@@ -168,7 +178,7 @@
         </div>
     </div>
     <div class="Action_Container">
-        <div class="Action_Wrapper">
+        <div class="Action_Wrapper SlideRight">
             <h1 class="Header5">Take Action</h1>
             <form action="#" class="Action_InputWrapper">
                 <input type="text" class="Action_Input" placeholder="Name">
@@ -178,9 +188,9 @@
             </form>
         </div>
     </div>
-    <div class="Nigh_Container">
-        <div class="Nigh_Wrapper">
-            <div class="Nigh_NiceContainer">
+    <div class="Nigh_Container ">
+        <div class="Nigh_Wrapper ">
+            <div class="Nigh_NiceContainer SlideRight">
                 <h1 class="Header2">
                     BRIGHT ASS ORANGE
                 </h1>
@@ -192,9 +202,9 @@
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quae itaque unde quos quia illo
                 </p>
             </div>
-            <div class="Nigh_NiceImage">
+            <div class="Nigh_NiceImage SlideRight">
             </div>
-            <div class="Nigh_InfoContainer">
+            <div class="Nigh_InfoContainer SlideRight">
                 <h1 class="Header3">
                     finaly a layout that blows your head off
                 </h1>
@@ -209,7 +219,7 @@
     </div>
     <footer class="Footer_Container">
         <div class="Footer_Wrapper">
-            <div class="Footer_LinkCluster">
+            <div class="Footer_LinkCluster FooterSlideLeft" style="--order: 1;">
                 <p class="Footer_Title">TEST</p>
                 <ul class="Footer_LinksWrapper">
                     <li class="Footer_ListItem">
@@ -229,7 +239,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="Footer_LinkCluster">
+            <div class="Footer_LinkCluster FooterSlideLeft" style="--order: 2;">
                 <p class="Footer_Title">TEST</p>
                 <ul class="Footer_LinksWrapper">
                     <li class="Footer_ListItem">
@@ -249,7 +259,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="Footer_LinkCluster">
+            <div class="Footer_LinkCluster FooterSlideLeft" style="--order: 3;">
                 <p class="Footer_Title">TEST</p>
                 <ul class="Footer_LinksWrapper">
                     <li class="Footer_ListItem">
@@ -269,7 +279,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="Footer_LinkCluster">
+            <div class="Footer_LinkCluster FooterSlideLeft" style="--order: 4;">
                 <p class="Footer_Title">TEST</p>
                 <ul class="Footer_LinksWrapper">
                     <li class="Footer_ListItem">
@@ -289,7 +299,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="Footer_LinkCluster">
+            <div class="Footer_LinkCluster FooterSlideLeft" style="--order: 5;">
                 <p class="Footer_Title">TEST</p>
                 <ul class="Footer_LinksWrapper">
                     <li class="Footer_ListItem">
